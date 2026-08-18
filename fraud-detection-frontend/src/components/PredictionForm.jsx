@@ -24,8 +24,7 @@ function PredictionForm() {
 
   const loadSample = async (isFraud) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/sample-transaction?fraud=${isFraud}`);
-      const data = await response.json();
+      const response = await fetch(`${API_BASE_URL}/sample-transaction?fraud=${isFraud}`);      const data = await response.json();
       const stringified = {};
       for (const key in data) {
         stringified[key] = String(data[key]);
