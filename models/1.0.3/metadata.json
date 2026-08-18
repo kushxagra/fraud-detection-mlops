@@ -1,0 +1,11 @@
+{
+    "model_name": "XGBoost Credit Card Fraud Classifier",
+    "model_version": "1.0.3",
+    "trained_at": "2026-06-26 14:30:00 UTC",
+    "framework": "xgboost (3.0.5)",
+    "baseline_metrics": {
+        "auprc": 0.8726,
+        "fraud_recall": 0.83,
+        "fraud_precision": 0.89
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "model_name": "XGBoost Credit Card Fraud Detector",
+  "version": "1.0.4",
+  "trained_at": "2026-07-06T16:34:46.954004",
+  "framework": "xgboost",
+  "baseline_metrics": {
+    "accuracy": 0.9995,
+    "fraud_precision": 0.883,
+    "fraud_recall": 0.8469,
+    "fraud_f1_score": 0.8646
+  }
+}

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: fraud_detection_api
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./fraud_detections.db:/app/fraud_detections.db
+      - ./creditcard.csv:/app/creditcard.csv

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-dark: #0a0f0d;
+  --surface: #121815;
+  --neon-green: #00ff41;
+  --status-good: #009938;
+  --status-critical: #ff3131;
+  --text-primary: #e0ffe6;
+  --text-muted: #7fae8c;
+  --border-glow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  /* Faint horizontal scanlines -- classic terminal/CRT texture */
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 65, 0.03) 0px,
+    rgba(0, 255, 65, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  color: var(--text-primary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: transparent;
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+nav button:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: var(--border-glow);
+}
+
+h1, h2, h3 {
+  color: var(--neon-green);
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.5);
+  letter-spacing: 1px;
+}
+
+form, section, table {
+  background: var(--surface);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.08);
+}
+
+label {
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+input {
+  width: 100%;
+  background: #0a0f0d;
+  border: 1px solid rgba(0, 255, 65, 0.4);
+  color: var(--text-primary);
+  padding: 0.5rem;
+  font-family: inherit;
+  margin-top: 0.25rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: var(--border-glow);
+}
+
+button[type="submit"], button[type="button"] {
+  background: transparent;
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: rgba(0, 255, 65, 0.15);
+  box-shadow: var(--border-glow);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+th {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.v-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.v-feature-grid label {
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+.v-feature-grid input {
+  padding: 0.35rem;
+}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Backend data (generated locally, not source code)
+fraud_detections.db
+
+# Environment secrets -- never commit these
+.env
+
+# Node / React frontend
+fraud-detection-frontend/node_modules/
+fraud-detection-frontend/dist/
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.git
+.gitignore
+fraud_detection.ipynb
+venv/
