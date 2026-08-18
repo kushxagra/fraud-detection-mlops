@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { API_BASE_URL } from "../config";
 
 const initialFormState = {
   Time: '',
@@ -8,7 +9,6 @@ for (let i = 1; i <= 28; i++) {
   initialFormState[`V${i}`] = '';
 }
 
-const API_URL = 'http://127.0.0.1:8000/predict';
 
 function PredictionForm() {
   const [formData, setFormData] = useState(initialFormState);
@@ -49,7 +49,7 @@ function PredictionForm() {
     }
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(`${API_BASE_URL}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../config';
 
-const METRICS_URL = 'http://127.0.0.1:8000/metrics';
+const METRICS_URL = `${API_BASE_URL}/metrics`;
 
 function MetricsPage() {
   const [metrics, setMetrics] = useState(null);

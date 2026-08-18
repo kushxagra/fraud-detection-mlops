@@ -3,9 +3,12 @@ import {
   PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer,
   LineChart, Line, XAxis, YAxis, CartesianGrid
 } from 'recharts';
+import { API_BASE_URL } from "../config";
 
-const METRICS_URL = 'http://127.0.0.1:8000/metrics';
-const RECENT_URL = 'http://127.0.0.1:8000/predictions/recent?limit=20';
+
+const METRICS_URL = `${API_BASE_URL}/metrics`;
+const RECENT_URL = `${API_BASE_URL}/predictions/recent?limit=20`;
+
 
 const COLORS = ['#009938', '#ff3131']; // validated: legitimate (good) / fraud (critical)
 function Charts() {

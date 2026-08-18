@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../config';   // NEW LINE
 
-const MODEL_INFO_URL = 'http://127.0.0.1:8000/model-info';
-const RETRAIN_URL = 'http://127.0.0.1:8000/retrain';
+
+const MODEL_INFO_URL = `${API_BASE_URL}/model-info`;
+const RETRAIN_URL = `${API_BASE_URL}/retrain`;
 
 function ModelInfoPage() {
   const [modelInfo, setModelInfo] = useState(null);

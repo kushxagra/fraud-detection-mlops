@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../config'; 
 
-const RECENT_URL = 'http://127.0.0.1:8000/predictions/recent?limit=20';
+const RECENT_URL = `${API_BASE_URL}/predictions/recent?limit=20`;
 
 function PredictionHistory() {
   const [predictions, setPredictions] = useState(null);

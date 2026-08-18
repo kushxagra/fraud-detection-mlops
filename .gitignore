@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 venv/
 
+.env.local
 creditcard.csv
 # Backend data (generated locally, not source code)
 fraud_detections.db
